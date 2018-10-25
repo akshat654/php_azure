@@ -1,7 +1,7 @@
 <?php
 require('../init.php');
 try {
-    $fileName = "../data.csv";
+    $fileName = "../data_.csv";
     $file = fopen($fileName, "r"); 
 
         //Deleting previous entries
