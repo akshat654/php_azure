@@ -35,7 +35,7 @@ $message = "";
 $response = array();
 
 try{ 
-    $sql = "SELECT * FROM footprint limit 1";  
+    $sql = "SELECT * FROM footprint";  
     $res = $conn->query($sql); 
     if($res->rowCount() > 0){ 
          while($row = $res->fetch()){ 
