@@ -3,7 +3,7 @@ require('../init.php');
 try {
     $fileName = "../data.csv";
     $file = fopen($fileName, "r"); 
-    
+
         //Deleting previous entries
         $sqlDelete = "DELETE FROM footprint";
         $conn->exec($sqlDelete);
@@ -18,7 +18,7 @@ try {
     }
 catch(PDOException $e)
     {
-        echo json_encode(array('error' => FALSE,
+        echo json_encode(array('error' => TRUE,
         'message'=>"Connection failed: " + $e->getMessage()));
     }
 ?>
