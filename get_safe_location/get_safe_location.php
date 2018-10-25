@@ -6,6 +6,8 @@ require('../init.php');
 //       "message"=>"unauthorized!")));
 // }
 
+echo $_POST['abc'];
+
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
   $theta = $lon1 - $lon2;
@@ -23,6 +25,8 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
         return $miles;
       }
 }
+
+
 
 $lat = $_POST['latitude'];
 $lon = $_POST['longitude'];
