@@ -19,6 +19,6 @@ try {
 catch(PDOException $e)
     {
         echo json_encode(array('error' => TRUE,
-        'message'=>"Connection failed: " + $e->getMessage()));
+        'message'=>$e->getMessage()));
     }
 ?>
