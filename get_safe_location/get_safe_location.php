@@ -6,8 +6,6 @@ require('../init.php');
 //       "message"=>"unauthorized!")));
 // }
 
-echo $_POST['abc'];
-
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
   $theta = $lon1 - $lon2;
@@ -55,11 +53,9 @@ try{
                     "lon3"=>$row['lon3'],
                     "lon4"=>$row['lon4'],
                     "height"=>$row['height'],
-                    "radius"=>$row['height']/6
-                ));
+                    "radius"=>$row['height']/6));
            }
         }
-        // echo "dsdad";
         unset($res);
         $error = False; 
     } else{ 
