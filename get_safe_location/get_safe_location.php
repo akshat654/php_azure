@@ -26,9 +26,9 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
 
 
-$lat = $_POST['latitude'];
-$lon = $_POST['longitude'];
-$DISTANCE = $_POST['distance'];
+// $lat = $_POST['latitude'];
+// $lon = $_POST['longitude'];
+// $DISTANCE = $_POST['distance'];
 
 $error = True;
 $message = "";
