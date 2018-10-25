@@ -9,6 +9,11 @@ try {
      	echo $row['lat1'];
      }
 
+     echo "not working";
+      $sqlDelete = "DELETE FROM footprint";
+        $conn->exec($sqlDelete);
+        echo "deleted successfully";
+
     }
 catch(PDOException $e)
     {
