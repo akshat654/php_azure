@@ -42,7 +42,7 @@ try{
             $lat_ = ($row['lat1']+$row['lat2']+$row['lat3']+$row['lat4'])/4;
             $lon_ = ($row['lon1']+$row['lon2']+$row['lon3']+$row['lon4'])/4;
 
-           if(distance($lat,$lon,$lat_,$lon_,"K")<=$DISTANCE){
+           // if(distance($lat,$lon,$lat_,$lon_,"K")<=$DISTANCE){
                 array_push($response,array(
                     "lat1"=>$row['lat1'],
                     "lat2"=>$row['lat2'],
@@ -54,7 +54,7 @@ try{
                     "lon4"=>$row['lon4'],
                     "height"=>$row['height'],
                     "radius"=>$row['height']/6));
-           }
+           // }
         }
         unset($res);
         $error = False; 
