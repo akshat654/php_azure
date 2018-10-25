@@ -35,10 +35,10 @@ $message = "";
 $response = array();
 
 try{ 
-  $stmt = "SELECT lat1 from footprint";
+  $stmt = "SELECT * from footprint";
      $result = $conn->query($stmt);
      while($row = $result->fetch()){
-      echo $row['lat1'];
+      echo $row['lat2'];
      }
     // $sql = "SELECT lat1,lat2 FROM footprint";  
     // $res = $conn->query($sql); 
