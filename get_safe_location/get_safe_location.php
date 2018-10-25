@@ -1,10 +1,10 @@
 <?php
 require('../init.php');
 
-if(!isset($_POST['distance']){
-    die(json_encode(array('error'=>TRUE,
-      "message"=>"unauthorized!")));
-}
+// if(!isset($_POST['distance']){
+//     die(json_encode(array('error'=>TRUE,
+//       "message"=>"unauthorized!")));
+// }
 
 function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
@@ -24,9 +24,9 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
       }
 }
 
-$lat = 38.817701;
-$lon = -75.659496;
-$DISTANCE = $_POST['distance'];
+$lat = 39.745441;
+$lon = -75.561994;
+$DISTANCE = 80;
 
 $error = True;
 $message = "";
