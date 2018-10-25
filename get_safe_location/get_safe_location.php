@@ -35,9 +35,8 @@ $message = "";
 $response = array();
 
 try{ 
-    $sql = "SELECT * FROM footprint";  
-    $res = $conn->exec($sql); 
-    echo $res->rowCount(); 
+    $sql = "SELECT * FROM footprint limit 1";  
+    $res = $conn->query($sql); 
     if($res->rowCount() > 0){ 
          while($row = $res->fetch()){ 
             $lat_ = ($row['lat1']+$row['lat2']+$row['lat3']+$row['lat4'])/4;
@@ -60,7 +59,7 @@ try{
         unset($res);
         $error = False; 
     } else{ 
-        $message = "Noare found"; 
+        $message = "No are found"; 
     } 
 
     echo json_encode(array("error"=>$error,
