@@ -35,25 +35,25 @@ $message = "";
 $response = array();
 
 try{ 
-    $sql = "SELECT * FROM footprint";  
+    $sql = "SELECT lat1,lat2 FROM footprint";  
     $res = $conn->query($sql); 
     if($res->rowCount() > 0){ 
          while($row = $res->fetch()){ 
-            $lat_ = ($row['lat1']+$row['lat2']+$row['lat3']+$row['lat4'])/4;
-            $lon_ = ($row['lon1']+$row['lon2']+$row['lon3']+$row['lon4'])/4;
+            // $lat_ = ($row['lat1']+$row['lat2']+$row['lat3']+$row['lat4'])/4;
+            // $lon_ = ($row['lon1']+$row['lon2']+$row['lon3']+$row['lon4'])/4;
 
            // if(distance($lat,$lon,$lat_,$lon_,"K")<=$DISTANCE){
                 array_push($response,array(
-                    "lat1"=>$row['lat1'],
-                    "lat2"=>$row['lat2'],
-                    "lat3"=>$row['lat3'],
-                    "lat4"=>$row['lat4'],
-                    "lon1"=>$row['lon1'],
-                    "lon2"=>$row['lon2'],
-                    "lon3"=>$row['lon3'],
-                    "lon4"=>$row['lon4'],
-                    "height"=>$row['height'],
-                    "radius"=>$row['height']/6));
+                    "lat1"=>$row['lat1']));
+                    // "lat2"=>$row['lat2'],
+                    // "lat3"=>$row['lat3'],
+                    // "lat4"=>$row['lat4'],
+                    // "lon1"=>$row['lon1'],
+                    // "lon2"=>$row['lon2'],
+                    // "lon3"=>$row['lon3'],
+                    // "lon4"=>$row['lon4'],
+                    // "height"=>$row['height'],
+                    // "radius"=>$row['height']/6));
            // }
         }
         unset($res);
