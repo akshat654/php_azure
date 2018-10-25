@@ -6,23 +6,23 @@ require('../init.php');
 //       "message"=>"unauthorized!")));
 // }
 
-function distance($lat1, $lon1, $lat2, $lon2, $unit) {
+// function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
-  $theta = $lon1 - $lon2;
-  $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-  $dist = acos($dist);
-  $dist = rad2deg($dist);
-  $miles = $dist * 60 * 1.1515;
-  $unit = strtoupper($unit);
+//   $theta = $lon1 - $lon2;
+//   $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
+//   $dist = acos($dist);
+//   $dist = rad2deg($dist);
+//   $miles = $dist * 60 * 1.1515;
+//   $unit = strtoupper($unit);
 
-  if ($unit == "K") {
-    return ($miles * 1.609344);
-  } else if ($unit == "N") {
-      return ($miles * 0.8684);
-    } else {
-        return $miles;
-      }
-}
+//   if ($unit == "K") {
+//     return ($miles * 1.609344);
+//   } else if ($unit == "N") {
+//       return ($miles * 0.8684);
+//     } else {
+//         return $miles;
+//       }
+// }
 
 
 
@@ -35,8 +35,8 @@ $message = "";
 $response = array();
 
 try{ 
-    $sql = "SELECT lat1 FROM footprint";  
-    $res = $conn->query($sql); 
+    $sql = "SELECT * FROM footprint";  
+    $res = $conn->exec($sql); 
     echo $res->rowCount(); 
     if($res->rowCount() > 0){ 
          while($row = $res->fetch()){ 
