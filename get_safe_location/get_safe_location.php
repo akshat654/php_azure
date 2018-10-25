@@ -35,7 +35,7 @@ $message = "";
 $response = array();
 
 try{ 
-    $sql = "SELECT FROM footprint";  
+    $sql = "SELECT lat1 FROM footprint";  
     $res = $conn->query($sql); 
     echo $res->rowCount(); 
     if($res->rowCount() > 0){ 
